@@ -26,6 +26,9 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
     client: 'pg',
     connection: {
       connectionString : process.env.DATABASE_URL,
+      ssl: {
+        rejectUnauthorized: false
+      }
     }
   });
 
